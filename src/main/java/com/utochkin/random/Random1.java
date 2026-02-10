@@ -1,7 +1,5 @@
 package com.utochkin.random;
 
-import java.util.HashMap;
-
 public class Random1 {
 
     // Написать метод (класс и импорты не нужны) на вход которого приходит две строки.
