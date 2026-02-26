@@ -50,9 +50,9 @@ public class ListNode8 {
             }
             ListNode8 groupNext = kth.next;
 
-            ListNode8 prev = kth.next;
-            ListNode8 curr = groupPrev.next;
-            while (curr != groupNext) {
+            ListNode8 prev = kth.next; // Узел после конца группы
+            ListNode8 curr = groupPrev.next; // Начало группы
+            while (curr != groupNext) {  // groupNext = kth.next
                 ListNode8 tmp = curr.next;
                 curr.next = prev;
                 prev = curr;
