@@ -22,7 +22,7 @@ public class WordDictionary {
     /*
     Возвращает true, если в структуре данных есть строка, соответствующая слову, и false в противном случае. Слово может содержать точки '.', которые могут совпадать с любой буквой.
      */
-    public boolean search(String word) { //
+    public boolean search(String word) {
         return dfs(word, 0, root);
     }
 
@@ -39,10 +39,11 @@ public class WordDictionary {
                 }
                 return false;
             } else {
-                if (current.children[c - 'a'] == null) {
+                int ii = c - 'a';
+                if (current.children[ii] == null) {
                     return false;
                 }
-                current = current.children[c - 'a'];
+                current = current.children[ii];
             }
         }
         return current.endOfWord;
