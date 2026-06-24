@@ -25,7 +25,7 @@ public class Swim_in_Rising_Water {
 
         PriorityQueue<int[]> minHeap = new PriorityQueue<>(Comparator.comparingInt(a -> a[0])); // [время_достижения, строка, столбец]
 
-        minHeap.offer(new int[]{grid[0][0], 0, 0});
+        minHeap.offer(new int[]{grid[0][0], 0, 0}); // [время_достижения, строка, столбец]
         visit[0][0] = true;
 
         while (!minHeap.isEmpty()) {
